@@ -10,3 +10,10 @@ $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
+
+
+$color-text-1: black;
+$color-fondo-1: rgb(11, 34, 110);
+$color-fondo-1a: color.scale($color-fondo-1, $lightness: 99%);
+$color-fondo-2: rgb(149, 176, 201);
+$color-borde-1: rgba(12, 6, 102, 0.733);
