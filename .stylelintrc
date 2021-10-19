@@ -1,35 +1,15 @@
 {
   "plugins": [
-    "stylelint-scss"
+    "stylelint-selector-bem-pattern"
   ],
-  "extends": [
-    "stylelint-config-recommended-scss",
-    "stylelint-config-standard"],
   "rules": {
-    "max-empty-lines": 4,
-    "string-quotes":"double",
-    "color-hex-length": "long",
-    "declaration-colon-newline-after": null,
-    "font-family-name-quotes": null,
-    "number-leading-zero":null,
-    "value-list-comma-newline-after": null,
-    "max-nesting-depth": 2,
-    "at-rule-no-unknown": true,
-    "scss/selector-no-redundant-nesting-selector": true,
-    "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
-    "block-closing-brace-empty-line-before": null,
-    "block-closing-brace-newline-after": null,
-    "block-closing-brace-newline-before": null,
-    "block-closing-brace-space-before": null,
-    "block-opening-brace-newline-after": null,
-    "block-opening-brace-space-after": null,
-    "block-opening-brace-space-before": null,
-    "declaration-block-semicolon-newline-after": null,
-    "declaration-block-semicolon-space-after": null,
-    "declaration-block-semicolon-space-before": null,
-    "declaration-block-trailing-semicolon": null
-  },
-  "ignoreFiles": [
-    "src/assets/styles/_variables.scss",
-    "src/assets/styles/main.scss"]
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
+  }
 }
